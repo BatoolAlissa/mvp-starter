@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://batool:test123@ds115664.mlab.com:15664/ticketing');
 
 var db = mongoose.connection;
 
@@ -11,15 +11,27 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
+//create schema
 var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+  ticket: String,
 });
 
-var Item = mongoose.model('Item', itemSchema);
+//modle
+var Ticket = mongoose.model('Ticket', itemSchema);
+
+// save ticket in DB
+  var save = function (data){
+      console.log(data.ticket)
+      console.log("db")
+
+    var object = {ticket:data} 
+    var ticket = new Ticket(object);
+
+    ticket.save();
+  }
 
 var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
+  Ticket.find({}, function(err, items) {
     if(err) {
       callback(err, null);
     } else {
@@ -28,4 +40,6 @@ var selectAll = function(callback) {
   });
 };
 
+
+module.exports.save = save;
 module.exports.selectAll = selectAll;

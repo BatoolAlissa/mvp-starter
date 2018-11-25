@@ -11,6 +11,9 @@ class App extends React.Component {
     }
   }
 
+
+
+
   componentDidMount() {
     $.ajax({
       url: '/items', 
@@ -27,7 +30,8 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>Item List</h1>
+      <h1>Ticketing System </h1>
+
       <List items={this.state.items}/>
     </div>)
   }
