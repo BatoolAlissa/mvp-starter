@@ -20,14 +20,19 @@ var itemSchema = mongoose.Schema({
 var Ticket = mongoose.model('Ticket', itemSchema);
 
 // save ticket in DB
-  var save = function (data){
-      console.log(data.ticket)
+  var save = function (data,callback){
+      // console.log(data.ticket)
       console.log("db")
 
-    var object = {ticket:data} 
-    var ticket = new Ticket(object);
+    
+    var ticket = new Ticket({ticket:data.text});
+//this not my code I try it
+    ticket.save(function(err){
+          if (err) { console.log("error", err)}
+          console.log('Saved!')
 
-    ticket.save();
+            callback('Saved!')
+      });
   }
 
 var selectAll = function(callback) {

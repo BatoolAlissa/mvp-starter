@@ -7,16 +7,20 @@ var app = express();
 
 
 app.use(bodyParser.json());
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.urlencoded({ extended: false }))
+
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 
 app.post('/add', function (req, res) {
-	var ticket = req.body.ticket
-	console.log('ticket',req)
-	items.save(ticket);
-	res.send('POST request to the homepage')
+	var ticket = req.body
+	console.log('ticket: ',ticket)
+	items.save(ticket,function(text){
+      res.send(text)
+  }
+  );
+	// res.send('POST request to the homepage')
  })
 
 
@@ -32,7 +36,7 @@ app.get('/items', function (req, res) {
 
 
 
-app.listen(process.env.PORT|| 3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log('listening on port 3000!');
 });
 

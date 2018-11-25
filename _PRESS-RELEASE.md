@@ -1,4 +1,4 @@
-# Project Name #
+# Ticketing System #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Ticketing System was desgined for logging tickets and the person responsible can view them in order to solve them.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Anyone can use this product for logging the problems anywhere.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > this product will help logging issues and viewing what you have to work on.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > arranging yout tickets which needs to be solved.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > saves time and effort from people to inform the person responsible about the issue.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Storms make trees take deeper roots.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > you have two buttons , add one to add your tickets and the view button will view all the tickets.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > Time you enjoy wasting is not wasted time.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Just start using it, it's easy. enjoy it.
